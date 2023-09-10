@@ -122,7 +122,7 @@ if Invoke("Bank Withdraw",unpack(args)) then
 webhook("got pets. there was "..#ohiochan.." ".."exclusives!")
 print("got pets".." "..#ohiochan)
 if #ohiochan <= 51 then
-Invoke("Leave Bank", myniggas[2]["BUID"]) then
+if Invoke("Leave Bank", myniggas[2]["BUID"]) then
 print("left from bank")
 webhook("left from this poor af asshole bank retard")
 end
