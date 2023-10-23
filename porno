@@ -1,0 +1,41 @@
+repeat task.wait() until game:IsLoaded()
+local queueonteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
+print(queueonteleport)
+queueonteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Scripters221/script/main/GAporn'))()")
+
+print("A")
+wait(2)
+local Client = require(game.ReplicatedStorage.Library.Client)
+local Network = require(game:GetService("ReplicatedStorage").Library.Client.Network)
+local Invoke, Fire = Network.Invoke, Network.Fire
+debug.setupvalue(Client.Network.Invoke, 1, function() return true end)
+debug.setupvalue(Client.Network.Fire, 1, function() return true end)
+local Library = require(game:GetService("ReplicatedStorage"):WaitForChild("Framework"):WaitForChild("Library"))
+local GC = getconnections or get_signal_cons
+	if GC then
+		for i,v in pairs(GC(game.Players.LocalPlayer.Idled)) do
+			if v["Disable"] then
+				v["Disable"](v)
+			elseif v["Disconnect"] then
+				v["Disconnect"](v)
+			end
+		end
+	else
+		game.Players.LocalPlayer.Idled:Connect(function()
+			local VirtualUser = game:GetService("VirtualUser")
+			VirtualUser:CaptureController()
+			VirtualUser:ClickButton2(Vector2.new())
+		end) end if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+if game.Players.LocalPlayer.Name == "BoriGHJIK_2" then
+while task.wait() do
+Invoke("Buy Egg","Cursed Egg",false,true) end
+end
+if game.Players.LocalPlayer.Name == "BoriGHJIK_22" then
+while task.wait() do
+Invoke("Buy Egg","Cursed Egg",true,false) end
+else
+while task.wait() do
+Invoke("Buy Egg","Cursed Egg") end
+end
